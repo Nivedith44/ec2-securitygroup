@@ -13,7 +13,8 @@ resource "aws_instance" "nive" {
 resource "aws_security_group" "nivsg" {
   name = "niv12"
   ingress {
-    protocol  = tcp
+    description = "HTTP"
+    protocol  = "tcp"
     self      = true
     from_port = 80
     to_port   = 80
